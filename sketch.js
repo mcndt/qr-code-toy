@@ -112,7 +112,7 @@ function selectFill(row, col) {
   if (min(row, col) >= PIXEL_ART_OFFSET && max(row, col) < PIXEL_ART_OFFSET + 16) {
     fill(PIXEL_ART[col - PIXEL_ART_OFFSET][row - PIXEL_ART_OFFSET]);
   } else {
-    fill(QR_CODE[row][col] * 255);
+    fill((1 - QR_CODE[row][col]) * 255);
   }
 }
 
